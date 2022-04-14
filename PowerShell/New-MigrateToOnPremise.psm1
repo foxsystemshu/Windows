@@ -50,7 +50,7 @@ function Migrate {
 ### Feladata: ###
 ## Kiválasztani a legtöbb szabad helyet tartalmazó Mailbox adatbázist,
 ## és átadja visszatérési értékként a kiválasztott DB nevet.
-#ToDO:  Ha a mailbox nagyobb mint az aktuális DB kóta, akkor azt nővelni kell itt.
+#ToDO:  Ha a mailbox nagyobb mint az aktuális DB kvóta, akkor azt nővelni kell itt.
 function DatabaseChoice {
    $activeDBs = @()
     $dbs = Get-MailboxDatabase  -status | Select-Object Name,AvailableNewMailboxSpace,DatabaseSize,Mounted
